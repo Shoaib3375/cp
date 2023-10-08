@@ -1,0 +1,13 @@
+{
+    "folders": [
+        {
+            "path": "E:\\traversy media"
+        },
+        {
+            "path": ".."
+        }
+    ],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "traversy media"
+    }
+}
