@@ -20,7 +20,7 @@ int main()
 
     // prints 10, 12, 14
     printf("while loop\n");
-    int i = 0;
+//    int i = 0;
     while (i <= 7)
     {
         printf("%d\n", i * 2);

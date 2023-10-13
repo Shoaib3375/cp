@@ -61,19 +61,34 @@
 //     return 0;
 // }
 
-#include<bits/stdc++.h>
-using namespace std;
+// #include<bits/stdc++.h>
+// using namespace std;
 
-int main()
-{
-    int count = 0;
-    for(int i = 1000; i >= 1; i--)
-    {
-        cout << "\t" << i;
-        count++;
-        if(count % 5 == 0){
-            cout<<endl;
+// int main()
+// {
+//     int count = 0;
+//     for(int i = 1000; i >= 1; i--)
+//     {
+//         cout << "\t" << i;
+//         count++;
+//         if(count % 5 == 0){
+//             cout<<endl;
             
-        }
-    }
+//         }
+//     }
+// }
+#include<stdio.h>
+
+int x = 1 ;
+void my_fun(int y){
+    y = y * 2;
+    x = x + 10;
+    printf("myfunc , x = %d, y = %d\n", x, y);
+}
+int main(){
+    int y = 5;
+    x = 10;
+    my_fun(y);
+    printf("main, x = %d, y = %d\n", x, y);
+    return 0;
 }
