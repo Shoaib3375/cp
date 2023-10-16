@@ -1,18 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int main() {
-    int t,n;
+int main()
+{
+    int t, n;
     cin >> t;
-    
-    for (int i = 1; i <= t; i++)
-    {
+    while(t--){
         cin >> n;
-        if (n%2)
+        if (n%2 == 0)
         {
-            cout << "Odd"<<endl;
+            cout<<"Even"<<endl;
         }else{
-            cout << "Even"<<endl;
+            cout<<"Odd"<<endl;;
         }
     }
+    return 0;
 }
