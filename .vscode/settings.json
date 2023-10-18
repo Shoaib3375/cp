@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "HCF2LCM.C": "cpp"
+        "HCF2LCM.C": "cpp",
+        "regex": "cpp"
     }
 }
