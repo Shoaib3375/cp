@@ -1,18 +1,19 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define ll long long
 
 int main(){
-  int N,K,M;
-  cin>>N>>K>>M;
-  int sumOfNum = 0;
-  for (int i = 1; i < N; i++)
+  long long a[200000], n;
+  cin >>n;
+  for (int i = 1; i <= n; i++)
   {
-    int number;
-    cin >> number;
-    sumOfNum += number;
+    cin >> a[i];
   }
-  int x = (N * M) - sumOfNum;
-  if(x < 0) x = 0;
-  if(x > K) x = -1;
-  cout<<x;
+  cout << a[2];
+  int sum = 0;
+  for (int i = 1; i <= n; i++)
+  {
+    sum += a[i];
+  }
+  cout << sum;
 }
