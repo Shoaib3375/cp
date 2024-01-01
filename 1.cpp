@@ -1,19 +1,29 @@
 #include <bits/stdc++.h>
 using namespace std;
+const int mx = 100013;
+int a[mx];
+
+int b[mx];
+
 #define ll long long
 
 int main(){
-  long long a[200000], n;
-  cin >>n;
-  for (int i = 1; i <= n; i++)
-  {
+
+
+  int n;
+  cin >> n;
+  for (int i = 1; i <=n; i++) {
     cin >> a[i];
   }
-  cout << a[2];
-  int sum = 0;
-  for (int i = 1; i <= n; i++)
+
+  for (int i = 1, j = n; i <= n; i++, j--)
   {
-    sum += a[i];
+    b[j] = a[i];
   }
-  cout << sum;
+  for (int i = 1; i <=n; i++)
+  {
+    cout << b[i];
+    cout << endl;
+  }
+
 }
