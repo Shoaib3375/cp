@@ -16,16 +16,14 @@ int main(){
     cin >> a[i];
   }
 
-  for (int i = 1, j = n; i < j; i++, j--)
+  for (int i = 1, j = n; i <= n; i++, j--)
   {
-    int temp = a[i];
-    a[i] = a[j];
-    a[j] = temp;
-
+    b[j] = a[i];
   }
   for (int i = 1; i <=n; i++)
   {
-    cout << a[i]<<endl;
+    cout << b[i];
+    cout << endl;
   }
 
 }
