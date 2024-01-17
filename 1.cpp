@@ -1,20 +1,26 @@
 #include <bits/stdc++.h>
 using namespace std;
-const int mx = 100013;
-int a[mx];
+const int mx = 123;
+int a[mx][mx];
 int b[mx];
 int freq[mx];
 #define ll long long
+
 int main() {
-    int i,n;
-    ll a[100];
-    cin >> n;
-    for(i=1;i<=n;i++)
+  int m, n;
+  cin >> n >> m;
+  for (int i = 0; i < n; ++i)
+  {
+    for (int j = 0; j < m; ++j)
     {
-        cin >> a[i];
+      cin >> a[i][j];
     }
-    for(i=n;i!=0;i--)
+  }
+  for (int i = 0; i < n; ++i)
+  {
+    for (int j = 0; j < m; ++j)
     {
-        cout<< a[i]<<" ";
-    }
+      cout << "(" <<i <<","<< j <<")"<< a[i][j]<< "\t";
+    } cout<<"\n";
+  }
 }
