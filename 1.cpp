@@ -7,20 +7,53 @@ int freq[mx];
 #define ll long long
 
 int main() {
-  int m, n;
-  cin >> n >> m;
-  for (int i = 0; i < n; ++i)
-  {
-    for (int j = 0; j < m; ++j)
+  // int m, n;
+  // cin >> n >> m;
+  // for (int i = 0; i < n; ++i)
+  // {
+  //   for (int j = 0; j < m; ++j)
+  //   {
+  //     cin >> a[i][j];
+  //   }
+  // }
+  // for (int i = 0; i < n; ++i)
+  // {
+  //   for (int j = 0; j < m; ++j)
+  //   {
+  //     cout << "(" <<i <<","<< j <<")"<< a[i][j]<< "\t";
+  //   } cout<<"\n";
+  // }
+
+  ll h,w;
+
+  while(1){
+    cin >> h>>w;
+    if (h==0 && w== 0) break;
+    for (int i = 1; i <=h; ++i)
     {
-      cin >> a[i][j];
+      for (int j = 1; j <=w; ++j)
+      {
+        if (i%2!=0)
+        {
+          if (j%2 != 0)
+          {
+            cout<<"#";
+          }else{
+            cout <<".";
+          }
+        }if (i%2==0){
+        
+          if (j%2 != 0)
+          {
+            cout <<".";
+          }else{
+            cout <<"#";
+          }
+        }
+      }
+      cout<<endl;
     }
+    cout<< endl;
   }
-  for (int i = 0; i < n; ++i)
-  {
-    for (int j = 0; j < m; ++j)
-    {
-      cout << "(" <<i <<","<< j <<")"<< a[i][j]<< "\t";
-    } cout<<"\n";
-  }
+  return 0;
 }
