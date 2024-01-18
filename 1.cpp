@@ -6,54 +6,22 @@ int b[mx];
 int freq[mx];
 #define ll long long
 
+
+
 int main() {
-  // int m, n;
-  // cin >> n >> m;
-  // for (int i = 0; i < n; ++i)
-  // {
-  //   for (int j = 0; j < m; ++j)
-  //   {
-  //     cin >> a[i][j];
-  //   }
-  // }
-  // for (int i = 0; i < n; ++i)
-  // {
-  //   for (int j = 0; j < m; ++j)
-  //   {
-  //     cout << "(" <<i <<","<< j <<")"<< a[i][j]<< "\t";
-  //   } cout<<"\n";
-  // }
 
-  ll h,w;
-
-  while(1){
-    cin >> h>>w;
-    if (h==0 && w== 0) break;
-    for (int i = 1; i <=h; ++i)
-    {
-      for (int j = 1; j <=w; ++j)
-      {
-        if (i%2!=0)
-        {
-          if (j%2 != 0)
-          {
-            cout<<"#";
-          }else{
-            cout <<".";
-          }
-        }if (i%2==0){
+    int n; 
+    cin >> n;
+    for (int i = 1; i <= n; ++i) {
+        string output = "1";
         
-          if (j%2 != 0)
-          {
-            cout <<".";
-          }else{
-            cout <<"#";
-          }
+        for (int j = 1; j <= i; ++j) {
+            char nextChar = 'A' + j - 1;
+            output += nextChar;
         }
-      }
-      cout<<endl;
+
+        cout << output << endl;
     }
-    cout<< endl;
-  }
-  return 0;
+
+    return 0;
 }
