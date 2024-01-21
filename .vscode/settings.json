@@ -1,6 +1,14 @@
 {
     "files.associations": {
         "HCF2LCM.C": "cpp",
-        "regex": "cpp"
+        "regex": "cpp",
+        "*.tcc": "cpp",
+        "forward_list": "cpp",
+        "list": "cpp",
+        "random": "cpp",
+        "ostream": "cpp",
+        "iostream": "cpp",
+        "valarray": "cpp",
+        "cmath": "cpp"
     }
 }
