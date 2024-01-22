@@ -9,6 +9,16 @@
         "ostream": "cpp",
         "iostream": "cpp",
         "valarray": "cpp",
-        "cmath": "cpp"
+        "cmath": "cpp",
+        "array": "cpp",
+        "bitset": "cpp",
+        "deque": "cpp",
+        "string": "cpp",
+        "unordered_map": "cpp",
+        "unordered_set": "cpp",
+        "vector": "cpp",
+        "initializer_list": "cpp",
+        "scoped_allocator": "cpp",
+        "sstream": "cpp"
     }
 }
