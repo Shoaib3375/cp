@@ -19,6 +19,7 @@
         "vector": "cpp",
         "initializer_list": "cpp",
         "scoped_allocator": "cpp",
-        "sstream": "cpp"
+        "sstream": "cpp",
+        "complex": "cpp"
     }
 }
