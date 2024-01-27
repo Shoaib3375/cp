@@ -1,54 +1,37 @@
-#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long
+#define d double
 
-// Function to find the GCD of two numbers
-int gcd(int a, int b) {
-    while (b != 0) {
-        int temp = b;
-        b = a % b;
-        a = temp;
-    }
-    return a;
-}
-
-// Function to find a K-sized subset with maximum GCD
-void findSubsetWithMaxGCD(int N, int K) {
-    // Create an array to store the subset
-    int subset[K];
-
-    // Fill the subset with the first K integers
-    for (int i = 0; i < K; ++i) {
-        subset[i] = i + 1;
-    }
-
-    // Find the GCD of all pairs in the subset
-    int maxGCD = 0;
-    for (int i = 0; i < K; ++i) {
-        for (int j = i + 1; j < K; ++j) {
-            maxGCD = std::max(maxGCD, gcd(subset[i], subset[j]));
+void solve()
+{
+    ll x,n;
+    cin>> x>>n;
+    int ans =1;
+    for (int i = 1; i <= x/i; ++i)
+    {
+        auto check = [&](int k){
+            if (x/k>=n)
+            {
+                ans = max(ans,k);
+            }
+        };
+        if (x % i  == 0)
+        {
+            check(i);
+            check(x/i);
         }
     }
-
-    // Replace the remaining elements in the subset with the maximum GCD
-    for (int i = K; i < N; ++i) {
-        subset[i % K] = maxGCD;
-    }
-
-    // Print the result
-    for (int i = 0; i < N; ++i) {
-        std::cout << subset[i] << " ";
-    }
-    std::cout << "\n";
+    cout<<ans<<endl;
 }
 
-int main() {
-    int T;
-    std::cin >> T;
-
-    while (T--) {
-        int N, K;
-        std::cin >> N >> K;
-
-        findSubsetWithMaxGCD(N, K);
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        solve();
     }
 
     return 0;

@@ -14,8 +14,6 @@ int main() {
             ageA[i] = age;
         }
     }
-
-    // Display the age array
     printf("Age array: ");
     for (int i = 0; i < ARRAY_SIZE; ++i) {
         printf("%d ", ageA[i]);
