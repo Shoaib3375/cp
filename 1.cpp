@@ -1,38 +1,34 @@
-#include <bits/stdc++.h>
-using namespace std;
-#define ll long long
-#define d double
+#include <stdio.h>
 
-void solve()
-{
-    ll x,n;
-    cin>> x>>n;
-    int ans =1;
-    for (int i = 1; i <= x/i; ++i)
-    {
-        auto check = [&](int k){
-            if (x/k>=n)
-            {
-                ans = max(ans,k);
+int main() {
+    int n;
+    printf("Enter the size of the array: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; ) {
+           
+            if (arr[i] == arr[j]) {
+                for (int k = j; k < n - 1; k++) {
+                    arr[k] = arr[k + 1];
+                }
+                n--; 
+            } else {
+                j++; 
             }
-        };
-        if (x % i  == 0)
-        {
-            check(i);
-            check(x/i);
         }
     }
-    cout<<ans<<endl;
-}
 
-int main()
-{
-    int t;
-    cin >> t;
-    while (t--)
-    {
-        solve();
+    printf("Array after removing duplicates: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
     }
+
+    printf("\n");
 
     return 0;
 }
