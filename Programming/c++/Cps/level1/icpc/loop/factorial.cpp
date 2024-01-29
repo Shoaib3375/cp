@@ -10,11 +10,19 @@ main()
     {
         int n;
         cin >> n;
-        int fact = 1;
-        for (int i = 1; i <= n; i++)
+        ll fact = 1;
+        if (n == 0)
         {
-            fact *= i;
+            fact = 1;
         }
+        else
+        {
+            for (int i = 1; i <= n; i++)
+            {
+                fact *= i;
+            }
+        }
+
         cout << fact << endl;
     }
 }
