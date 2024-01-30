@@ -22,7 +22,6 @@ main()
     {
         for (int j = 0; j < m; j++)
         {
-            cout << a[i+1][j];
             if (a[i][j] == x)
             {
                 isExists = true;
@@ -34,6 +33,6 @@ main()
             break;
         }
     }
-    // if (isExists) cout << "Will not take number";
-    // else cout << "will take number";
+    if (isExists) cout << "Will not take number";
+    else cout << "will take number";
 }
