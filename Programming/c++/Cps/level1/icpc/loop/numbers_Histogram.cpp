@@ -4,13 +4,16 @@ using namespace std;
 #define d double
 int main()
 {
-    int n;
-    cin >> n;
-    for (int i = 0; i < n; i++)
+    char s;
+    int t, num;
+    cin >> s;
+    cin >> t;
+    while (t--)
     {
-        for (int j = 0; j < i; j++)
+        cin >> num;
+        for (int i = 0; i < num; i++)
         {
-            cout << "*";
+            cout << s;
         }
         cout << endl;
     }

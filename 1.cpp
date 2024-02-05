@@ -1,39 +1,22 @@
-#include <bits/stdc++.h>
+#include<bits/stdc++.h>
 using namespace std;
-#define ll long long
-#define d double
-const int mx = 123;
-int a[mx][mx];
-main()
+int main()
 {
-    int n, m;
-    cin >> n >> m;
-    for (int i = 0; i < n; i++)
+    int n;
+    cin>>n;
+    int a[15][15];
+    for(int i=1; i<=1; i++)
     {
-        for (int j = 0; j < m; j++)
+        for(int j=1; j<=n; j++)
+            a[i][j]=1;
+    }
+    for(int i=2; i<=n; i++)
+    {
+        a[i][1]=1;
+        for(int j=2; j<=n; j++)
         {
-            cin >> a[i][j];
+            a[i][j]=a[i-1][j]+a[i][j-1];
         }
     }
-    int x;
-    cin >> x;
-    bool isExists = false;
-    for (int i = 0; i < n; i++)
-    {
-        for (int j = 0; j < m; j++)
-        {
-            cout << a[i+1][j];
-            if (a[i][j] == x)
-            {
-                isExists = true;
-                break;
-            }
-        }
-        if (isExists)
-        {
-            break;
-        }
-    }
-    // if (isExists) cout << "Will not take number";
-    // else cout << "will take number";
+    cout<<a[n][n]<<endl;
 }
