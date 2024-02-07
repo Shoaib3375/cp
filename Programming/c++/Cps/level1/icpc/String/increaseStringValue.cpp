@@ -8,7 +8,7 @@ int main(){
     cin >> s;
     int len = 0;
     while(s[len] != '\0'){
-        cout <<  len<<" : "<< s[len]<<endl;
+        cout <<  len<< s[len]<<endl;
         len++;
     }
     for (int i = 0; i < len; i++)

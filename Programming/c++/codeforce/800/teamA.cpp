@@ -4,17 +4,15 @@ using namespace std;
 #define d double
 int main()
 {
-
-    int t, Petya, Vasya, Tonya, number=0;
+    int t, p, v,to, number = 0;
     cin >> t;
     while (t--)
     {
-        cin >> Petya >> Vasya >> Tonya;
-        if (Petya + Vasya + Tonya >= 2)
+        cin >> p >> v >> to;
+        if ((p + v + to) >= 2)
         {
             number += 1;
         }
     }
     cout << number << endl;
-    return 0;
 }
