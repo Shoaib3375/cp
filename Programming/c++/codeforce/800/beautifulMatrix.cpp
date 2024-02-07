@@ -12,6 +12,7 @@ int main(){
             cin>>x;
             if(x==1){
                 cout<<abs(i-3)+abs(j-3)<<endl;
+                // cout<<(i-3)+(j-3)<<endl;
             }
         }
         
