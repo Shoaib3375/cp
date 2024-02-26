@@ -7,8 +7,9 @@ main()
 
     int X;
     cin >> X;
-    int num_digits = log10(X) + 1;
-    int first_digit = X / pow(10, num_digits - 1);
+    // int num_digits = log10(X) + 1;
+    // int first_digit = X / pow(10, num_digits - 1);
+    int first_digit = X/1000;
     if (first_digit % 2 == 0)
     {
         cout << "EVEN" << endl;

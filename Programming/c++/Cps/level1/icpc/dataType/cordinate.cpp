@@ -19,6 +19,6 @@ main()
         cout<<"Q2"<<endl;
     else if (X < 0 && Y < 0)
         cout << "Q3"<<endl;
-    else
+    else if (X> 0 && Y<0)
         cout<<"Q4"<<endl;
 }

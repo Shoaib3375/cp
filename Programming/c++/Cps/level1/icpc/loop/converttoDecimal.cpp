@@ -7,14 +7,11 @@ int main()
 {
     int t;
     cin >> t;
-    int onei = 0;
-
-    while(t--)
+    ll n;
+    while (t--)
     {
-        ll n;
         cin >> n;
-        int rem;
-
+        int onei = 0;
         while (n > 0)
         {
             if (n % 2 == 1)

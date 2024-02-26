@@ -6,7 +6,7 @@ main()
 {
     int a, b, c,hi, mid, lo;
     cin >> a >> b >> c;
-
+// 3 -2 1
     if (a > b)
     {
         mid = a;
