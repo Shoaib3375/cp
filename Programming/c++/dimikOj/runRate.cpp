@@ -10,6 +10,6 @@ int main(){
 		current_rr = (r2/ballPlayed)*6;
 		asking_rr = ((r1-r2 + 1) / B) * 6;
 		printf("%0.2lf %0.2lf", current_rr, asking_rr);
-		return 0
+		return 0;
 	}
 }
