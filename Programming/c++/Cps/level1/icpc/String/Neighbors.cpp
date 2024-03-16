@@ -10,7 +10,7 @@ char grid[101][101];
 int main()
 {
     int n, m;
-    cin >> n>>m;
+    cin >> n >> m;
 
     for (int i = 1; i <= n; i++)
     {
@@ -19,15 +19,11 @@ int main()
             cin >> grid[i][j];
         }
     }
-    int row, col;
-    cin >> row >> col;
-    if (grid[row - 1][col - 1] != '.' && grid[row - 1][col] != '.' &&
-        grid[row - 1][col + 1] != '.' &&
-        grid[row][col - 1] != '.' &&
-        grid[row][col] != '.' &&
-        grid[row][col + 1] != '.' &&
-        grid[row + 1][col - 1] != '.' &&
-        grid[row + 1][col] != '.' && grid[row + 1][col + 1] != '.')
+    int rowin, colin;
+    cin >> rowin >> colin;
+    if (grid[rowin - 1][colin - 1] != '.' && grid[rowin - 1][colin] != '.' && grid[rowin - 1][colin + 1] != '.' &&
+        grid[rowin][colin - 1] != '.' && grid[rowin][colin + 1] != '.' &&
+        grid[rowin + 1][colin - 1] != '.' && grid[rowin + 1][colin] != '.' && grid[rowin + 1][colin + 1] != '.')
     {
         cout << "yes\n";
     }
