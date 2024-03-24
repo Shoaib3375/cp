@@ -2,21 +2,15 @@
 
 using namespace std;
 #define ll long long
-#define d double
-int a[100010];
-int cnt[30];
-const ll mx = 10e9 + 123;
-char grid[101][101];
-int x[123], y[123];
 int main()
 {
     int t;
-    cin>>t;
+    cin>> t;
     while (t--)
     {
-        int numBuns, numPatti, numKut, priceHam, priceChicken;
+        ll numBuns, numPatti, numKut, priceHam, priceChicken;
         cin >> numBuns >> numPatti >> numKut >> priceHam >> priceChicken;
-        int mxPrice, mnPrice, mxPricePattiNum, mnPricePattiNum;
+        ll mxPrice, mnPrice, mxPricePattiNum, mnPricePattiNum;
 
         if (priceHam > priceChicken)
         {
@@ -58,7 +52,8 @@ int main()
             profit += (mnPrice * mnPricePattiNum);
         }
 
-        printf("%d\n", profit);
-        return 0;
+        cout << profit<<endl;
+        
     }
+    return 0;
 }

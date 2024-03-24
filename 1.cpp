@@ -1,27 +1,39 @@
 #include <bits/stdc++.h>
 
 using namespace std;
-#define ll long long
+typedef long long int lli;
 #define d double
-int a[100010];
-int cnt[30];
-const ll mx = 10e9 + 123;
-char grid[101][101];
-int x[123], y[123];
-int main()
-{
-    int t, ans, x, n;
-    cin >> t;
-    while (t--)
+    void solve(){
+    ll a,cnt = 0; cin>> a;
+    map<ll,ll>mp;
+    ll arr[a+1];
+    for (int i = 1; i <=a; ++i)
     {
-        cin >> n;
-        cin >> ans;
-        n--;
-        while (n--)
+        if (arr[i]==[(a+1)/2])
         {
-            cin >> x;
-            ans = ans - ans % x + x;
+            cnt++;
+            
         }
-        cout << ans << endl;
+        else break;
+        cout << cnt<<endl;
     }
 }
+
+
+int main()
+{
+    int t = 1;
+    cin>>t;
+    while(t--){
+        solve();
+    }
+    return 0;
+}
+
+// site key: 6LcsOKIpAAAAAK1-HPO2yU5nkvYCDzYrQgnL9Viy
+// secret key: 6LcsOKIpAAAAAIvpBzI0mW7M9h9gsmGXoH6e_rfe
+
+@Faizul100%..
+info.mustafaworld@gmail.com
+
+// main site: 6Ld_nrsZAAAAAO-MowQQPfbD9yoio52GiMgUrmRX
