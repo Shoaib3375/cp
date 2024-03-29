@@ -2,57 +2,33 @@
 
 using namespace std;
 #define ll long long
+
 int main()
 {
     int t;
-    cin>> t;
+    cin >> t;
     while (t--)
     {
-        ll numBuns, numPatti, numKut, priceHam, priceChicken;
-        cin >> numBuns >> numPatti >> numKut >> priceHam >> priceChicken;
-        ll mxPrice, mnPrice, mxPricePattiNum, mnPricePattiNum;
-
-        if (priceHam > priceChicken)
+        ll b, p, f;
+        cin >> b >> p >> f;
+        ll h, c;
+        cin >> h >> c;
+        ll num = b / 2;
+        ll price = 0;
+        if (h >= c)
         {
-            mxPrice = priceHam;
-            mxPricePattiNum = numPatti;
-
-            mnPrice = priceChicken;
-            mnPricePattiNum = numKut;
+            price += min(num, p) * h;
+            num -= min(num, p);
+            price += min(num, f) * c;
         }
         else
         {
-            mxPrice = priceChicken;
-            mxPricePattiNum = numKut;
-
-            mnPrice = priceHam;
-            mnPricePattiNum = numPatti;
+            price += min(num, f) * c;
+            num -= min(num, f);
+            price += min(num, p) * h;
         }
+        cout << price << "\n";
 
-        int numBurger = numBuns / 2;
-        int profit = 0;
-
-        if (mxPricePattiNum >= numBurger)
-        {
-            numBurger = 0;
-            profit += (numBurger * mxPrice);
-        }
-        else
-        {
-            numBurger -= mxPricePattiNum;
-            profit += (mxPrice * mxPricePattiNum);
-        }
-
-        if (mnPricePattiNum >= numBurger)
-        {
-            profit += (numBurger * mnPrice);
-        }
-        else
-        {
-            profit += (mnPrice * mnPricePattiNum);
-        }
-
-        cout << profit<<endl;
         
     }
     return 0;

@@ -2,63 +2,51 @@
 
 using namespace std;
 #define ll long long
-#define d double
-int a[100010];
-int cnt[30];
-const ll mx = 10e9 + 123;
-char grid[101][101];
-int x[123], y[123];
 int main()
 {
     int t;
-    cin>>t;
+    cin>> t;
     while (t--)
     {
-        int numBuns, numPatti, numKut, priceHam, priceChicken;
+        ll numBuns, numPatti, numKut, priceHam, priceChicken;
         cin >> numBuns >> numPatti >> numKut >> priceHam >> priceChicken;
-        int mxPrice, mnPrice, mxPricePattiNum, mnPricePattiNum;
-
-        if (priceHam > priceChicken)
-        {
-            mxPrice = priceHam;
-            mxPricePattiNum = numPatti;
-
-            mnPrice = priceChicken;
-            mnPricePattiNum = numKut;
+        ll mxPrice, mnPrice, mxPricePattiNum, mnPricePattiNum;
+        ll chickenBurger = 0;
+        ll beefBurger = 0;
+        ll profit = 0;
+        ll numBurger = numBuns/2;
+        if(numBuns==1){
+            cout << profit <<endl;
+            return 0;
         }
-        else
+        if(priceChicken>priceHam){
+            while (numBurger>=numKut&&numKut!=0)
+            {
+                numKut--;
+                numBurger--;
+                chickenBurger++;
+            }
+        }else if (priceHam>priceChicken)
         {
-            mxPrice = priceChicken;
-            mxPricePattiNum = numKut;
-
-            mnPrice = priceHam;
-            mnPricePattiNum = numPatti;
+            while (numBurger>=numPatti)
+            {
+                while (numBurger>=numPatti&&numPatti!=0)
+                {
+                    numPatti--;
+                    numBurger--;
+                    beefBurger++;
+                }
+                
+            }
+            
         }
+        int chickenProfit = chickenBurger * priceChicken;
+        int beefProfit = beefBurger * priceHam;
+        profit = chickenProfit + beefProfit;
+        cout << profit<<endl;
+        
 
-        int numBurger = numBuns / 2;
-        int profit = 0;
-
-        if (mxPricePattiNum >= numBurger)
-        {
-            numBurger = 0;
-            profit += (numBurger * mxPrice);
-        }
-        else
-        {
-            numBurger -= mxPricePattiNum;
-            profit += (mxPrice * mxPricePattiNum);
-        }
-
-        if (mnPricePattiNum >= numBurger)
-        {
-            profit += (numBurger * mnPrice);
-        }
-        else
-        {
-            profit += (mnPrice * mnPricePattiNum);
-        }
-
-        printf("%d\n", profit);
-        return 0;
+        
     }
+    return 0;
 }
