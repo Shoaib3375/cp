@@ -2,9 +2,11 @@
 
 using namespace std;
 #define ll long long int
+#define optimize() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 
 int main()
 {
+    optimize();
     int n, cnt = 0;
     cin >> n;
 
@@ -16,4 +18,5 @@ int main()
     {
         cout << n / 5 + 1 << endl;
     }
+    return 0;
 }

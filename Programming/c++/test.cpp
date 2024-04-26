@@ -1,16 +1,11 @@
-#include <iostream>
-#include <vector>
-#include <string>
-
-using namespace std;
-
-int main()
-{
-    vector<string> msg{"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
-
-    for (const string &word : msg)
-    {
-        cout << word << "uu ";
-    }
-    cout << endl;
+#include<stdio.h>
+#include<math.h>
+int main(){
+    float a,b,c,s,perimeter,area;
+    printf("Enter");
+    scanf("%f %f %f",&a, &b, &c);
+    perimeter = a+b+c;
+    s = perimeter / 2.0;
+    area = sqrt(s*(s-a)*(s-b)*(s-c));
+    printf("Area and meri  %0.2f and %.2f",area,perimeter);
 }
