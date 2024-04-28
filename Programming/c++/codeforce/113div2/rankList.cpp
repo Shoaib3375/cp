@@ -11,7 +11,6 @@ int main()
 {
     optimize();
 
-
     int n, k;
     cin >> n >> k;
 
@@ -21,10 +20,6 @@ int main()
     {
         cin >> v[i].first >> v[i].second;
         v[i].first *= -1;
-    }
-    for (int i = 0; i < n; ++i)
-    {
-        cout << v[i].first<<endl;
     }
 
     sort(v.begin(), v.end());
