@@ -6,7 +6,7 @@ int main(){
     int sum = 0;
     while (t--)
     {
-        int a,b,c = 0;
+        int a,b,c;
         cin>> a>> b>> c;
         sum += a;
         sum += b;
