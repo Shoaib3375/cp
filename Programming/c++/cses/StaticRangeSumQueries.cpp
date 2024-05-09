@@ -26,8 +26,15 @@ int main()
     {
         int l, r;
         cin >> l >> r;
-
-        cout << (preSum[r] - preSum[l - 1]) << endl;
+            // 8 4
+            // 3 2 4 5  1  1  5  3
+            // 1 2 3 4  5  6  7  8
+            // 3 5 9 14 15 16 21 24
+            // 2 4
+            // 5 6
+            // 1 8
+            // 3 3
+        cout << (preSum[r] - preSum[l - 1]) << endl; // l-1 cause left value use before value sum
     }
 
     return 0;
