@@ -1,18 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
-void solve(int a)
-{
-
-    for (int i = 1; i < a; i++)
-    {
-        cout << i << " ";
-    }
-    cout << a;
-}
-int main()
+int solve()
 {
     int a;
     cin >> a;
-    solve(a);
+    for (int i = 1; i <=a; i++)
+    {
+        cout << i << " ";
+    }
+}
+int main()
+{
+
+    cout << solve() << endl;
     return 0;
 }
