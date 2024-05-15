@@ -8,5 +8,5 @@ int main()
 {
     int n;
     cin>> n;
-    int by = 
+    int by = 0;
 }
