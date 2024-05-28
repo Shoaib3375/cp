@@ -1,16 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-    int n;
-    cin >> n;
+    int k,l,m,n,d;
     int cnt = 0;
-    while (n--)
+    cin>> k>> l>> m>> n>>d;
+    for (int i = 1; i <=d; i++)
     {
-        int p,q;
-        cin>> p>> q;
-        if(p+1<q){
+        if(i%k==0|| i %l==0||i%m==0||i%n==0){
             cnt++;
         }
     }
     cout << cnt<<endl;
+    
 }

@@ -3,7 +3,7 @@ using namespace std;
 const int mx = 100013;
 int a[mx];
 
-int b[mx];
+int freq[mx];
 
 #define ll long long
 
