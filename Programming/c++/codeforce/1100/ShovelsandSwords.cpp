@@ -3,8 +3,10 @@ using namespace std;
 void solve()
 {
     int s, d;
-    cin >> s >> d;
-    cout << min((s + d) / 3, min(s, d))<<endl;
+    cin>> s>>d;
+    if(s>d){
+        swap(s,d);
+    }
 }
 int main()
 {
