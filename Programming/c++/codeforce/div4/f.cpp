@@ -1,31 +1,55 @@
-#include <bits/stdc++.h>
-
+#include<bits/stdc++.h>
 using namespace std;
-#define ll long long
-int solve(string s) {
-int n = s.length();
-vector<int> cnt(2,0);
-int p = 0;
-for (int i = 0; i < n; i++)
+#define int long long
+
+
+int32_t main()
 {
-    cnt[s[i] - '0']++;
-    if(cnt[0] && cnt[1]){
-        p++;
-        cnt[0] = cnt[1] = 0;
-    }
-}
-return p + 1;
-
-
-}
-
-int main() {
     int t;
-    cin >> t;
-    while (t--) {
-       string s;
-       cin>> s;
-       cout << solve(s)<<endl;
+    cin>>t;
+   
+    while(t--)
+    {
+       int x,y,k;
+       cin>>x>>y>>k;
+       
+       int h;
+       int f;
+       
+       if(x%k==0)
+       {
+           h=x/k;
+       }
+       else
+       {
+           h=(x/k)+1;
+       }
+       
+       if(y%k==0)
+       {
+           f=y/k;
+       }
+       else
+       {
+           f=(y/k)+1;
+       }
+       
+
+       
+       int minimum=min(h,f);
+       
+       int maximum=max(h,f);
+       int ans=minimum+maximum+(maximum-minimum);
+       
+       if(h>f)
+       {
+           ans--;
+       }
+       
+       cout<<ans<<endl;
+       
     }
+   
+   
     return 0;
 }

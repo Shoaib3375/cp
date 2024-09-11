@@ -22,11 +22,11 @@ int main()
         cin >> arr[i];
     }
     sort(arr + 1, arr + n + 1);
-    int l = 0, r = 2e5 + 123;
-    int ans = 0;
+    ll l = 0, r = 2e9 + 123;
+    ll ans = 0;
     while (l <= r)
     {
-        int mid = (l + r) / 2;
+        ll mid = (l + r) / 2;
         if (solve(mid))
         {
             ans = mid;
