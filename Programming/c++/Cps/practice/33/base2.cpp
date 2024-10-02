@@ -6,7 +6,7 @@ int main(){
      ull ans= 0;
     for (int i = 0; i < 64; i++)
     {
-        ull n;
+        int n;
         cin>> n;
         ans += n<<i;
     }
