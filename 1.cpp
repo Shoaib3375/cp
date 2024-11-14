@@ -1,16 +1,26 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-typedef unsigned long long ull;
-int main(){
-    int lim = 64;
-     ull ans= 0;
-    for (int i = 0; i < 64; i++)
+void solve(){
+    string s;
+    cin>> s;
+    for (int i = 0; i < (s.size()/2)-1 ; i++)
     {
-        ull n;
-        cin>> n;
-        ans += n<<i;
+        if(s[i]!=s[i+1]){
+            cout << "YES"<<endl;
+            return;
+        }
     }
-    cout << ans<<'\n';
-    return 0;
+    cout << "NO\n";
     
+}
+int main()
+{
+    
+    int t;
+    cin>> t;
+    while (t--)
+    {
+        solve();
+    }
+    return 0;
 }

@@ -1,31 +1,45 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
 #define MOD 10000007
 ll dp[10123];
 int a, b, c, d, e, f;
-int fn(int n) {
-    if (n == 0) return a;
-    if (n == 1) return b;
-    if (n == 2) return c;
-    if (n == 3) return d;
-    if (n == 4) return e;
-    if (n == 5) return f;
-    ll res =  fn(n-1) + fn(n-2) + fn(n-3) + fn(n-4) + fn(n-5) + fn(n-6);
-    dp[n] = res % MOD;
+
+int fn(int n)
+{
+    if (dp[n] != -1)
+        return dp[n];
+
+    if (n == 0)
+        return dp[n] = a;
+    if (n == 1)
+        return dp[n] = b;
+    if (n == 2)
+        return dp[n] = c;
+    if (n == 3)
+        return dp[n] = d;
+    if (n == 4)
+        return dp[n] = e;
+    if (n == 5)
+        return dp[n] = f;
+
+    dp[n] = (fn(n - 1) + fn(n - 2) + fn(n - 3) + fn(n - 4) + fn(n - 5) + fn(n - 6)) % MOD;
     return dp[n];
 }
-int main() {
+int main()
+{
     int n, cases;
     scanf("%d", &cases);
-    for (int t = 1; t <= cases; ++t) {
+    for (int t = 1; t <= cases; ++t)
+    {
+        memset(dp, -1, sizeof(dp));
         scanf("%d %d %d %d %d %d %d", &a, &b, &c, &d, &e, &f, &n);
-        printf("Case %d: %d\n", t, fn(n) % 10000007);
+        printf("Case %d: %d\n", t, fn(n) % MOD);
     }
     return 0;
 }
 
-/* 
+/*
 
 #include <iostream>
 using namespace std;
