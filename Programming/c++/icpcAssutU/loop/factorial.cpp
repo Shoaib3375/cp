@@ -4,25 +4,21 @@ using namespace std;
 #define d double
 main()
 {
-    int t;
-    cin >> t;
-    while (t--)
-    {
-        int n;
-        cin >> n;
-        ll fact = 1;
-        if (n == 0)
-        {
-            fact = 1;
-        }
-        else
-        {
-            for (int i = 1; i <= n; i++)
-            {
-                fact *= i;
-            }
-        }
 
-        cout << fact << endl;
+    int n;
+    cin >> n;
+    ll fact = 1;
+    if (n == 0)
+    {
+        fact = 1;
     }
+    else
+    {
+        for (int i = 1; i <= n; i++)
+        {
+            fact *= i;
+        }
+    }
+
+    cout << fact << endl;
 }

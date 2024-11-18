@@ -1,11 +1,13 @@
 #include<stdio.h>
 int main(){
     char c = 'A';
-    char *p , **q;
+    char *p,**q;
     p = &c;
     q = &p;
+    **q = 'b';
     printf("Value of c : %c\n", c);
     printf("Value of c : %c\n", *p);
     printf("Value of c : %c\n", **q);
+
     
 }

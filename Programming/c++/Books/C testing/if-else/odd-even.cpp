@@ -3,14 +3,9 @@ int main()
 {
     int a;
     scanf("%d", &a);
-
-    if (a % 2)
-    {
-        printf("%d is event\n", a);
+    if(a&1){
+        printf("%d is Odd",a);
+    }else{
+        printf("%d is Even",a);
     }
-    else
-    {
-        printf("%d is Odd");
-    }
-    return 0;
 }

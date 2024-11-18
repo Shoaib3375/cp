@@ -1,18 +1,19 @@
-#include<bits/stdc++.h>
-using namespace std;
+#include<stdio.h>
 
 int main() {
     int num, reversed = 0,ans =0;
-    cout << "Enter a number: ";
-    cin >> num;
+    printf("Enter number: ");
+    scanf("%d",&num);
+    // num = 12  // digit = 1      // rev = 432 * 10 + 1 = 4321
+    // ans = 7 + 2 = 9 + 1 = 10
     while (num != 0) {
-        int digit = num % 10;
+        int digit = num % 10;   
         reversed = reversed * 10 + digit;
         ans += digit;
         num = num / 10;
     }
     
-    cout << "Reversed number: " << reversed << endl;
-    cout << "Sum of digits: " << ans << endl;
+    printf("Reversed Number: %d\n",reversed);
+    printf("Total sum of Digit: %d\n",ans);
     return 0;
 }

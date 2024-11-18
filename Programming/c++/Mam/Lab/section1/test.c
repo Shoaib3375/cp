@@ -11,7 +11,8 @@
 int main(){
     int a;
     scanf("%d",&a);
-    if(a&1){
+    // if(a&1)
+    if(a%2==1){
         printf("%d is a odd number",a);
     }else{
         printf("%d is a even number",a);
