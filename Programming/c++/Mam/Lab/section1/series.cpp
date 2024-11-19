@@ -3,13 +3,13 @@
 int main() {
     int n;
     scanf("%d", &n); 
-    int i;
-    float sums = 0.0;
-    float temp;
-    for (i = 1; i <= n; ++i) {
-        temp = 1 / (i^i);  
+  
+    double sums = 0.0;
+    double temp;
+    for (int i = 1; i <= n; ++i) {
+        temp = 1 / pow(i,i);  
         sums = sums + temp;  
     }
-    printf("%.5f", sums);
+    printf("%0.5f", sums);
     return 0;
 }

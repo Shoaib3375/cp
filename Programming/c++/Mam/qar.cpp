@@ -23,7 +23,7 @@ int main() {
         realPart = -b / (2 * a);
         imaginaryPart = sqrt(-discriminant) / (2 * a);
         printf("Roots are complex and different.\n");
-        printf("Root 1 = %.2f + %.2fi and Root 2 = %.2f - %.2fi\n", realPart, imaginaryPart, realPart, imaginaryPart);
+        printf("Root 1 = %0.2f + %0.2fi and Root 2 = %0.2f - %0.2fi\n", realPart, imaginaryPart, realPart, imaginaryPart);
     }
 
     return 0;

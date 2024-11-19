@@ -1,5 +1,4 @@
-#include<bits/stdc++.h>
-using namespace std;
+#include<stdio.h>
 int main(){
     int n = 3;
     int a[n][n], b[n][n];
@@ -9,7 +8,7 @@ int main(){
     {
         for (int j = 0; j < n; j++)
         {
-            cin >> a[i][j];
+            scanf("%d",&a[i][j]);
             asum += a[i][j];
         }
         
@@ -20,12 +19,12 @@ int main(){
     {
         for (int j = 0; j < n; j++)
         {
-            cin >> b[i][j];
+            scanf("%d",&b[i][j]);
             bsum += b[i][j];
         }
         
     }
     sum = asum + bsum;
     
-    cout << sum << endl;
+    printf("%d",sum);
 }
