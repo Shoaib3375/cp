@@ -3,7 +3,7 @@ int main(){
     int n = 3;
     int a[n][n], b[n][n];
     int asum = 0, bsum = 0, sum = 0;
-    printf("Enter first matrix a value");
+    printf("Enter first matrix a value:\n");
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
@@ -13,7 +13,7 @@ int main(){
         }
         
     }
-    printf("Enter second matrix a value");
+    printf("Enter second matrix a value\n");
     
     for (int i = 0; i < n; i++)
     {
