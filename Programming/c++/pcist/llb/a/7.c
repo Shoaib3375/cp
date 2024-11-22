@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main()
 {
-    int n; // n= 5;
+    int n; 
     scanf("%d", &n);
     int fact = 1;
     if (n == 0)
