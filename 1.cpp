@@ -1,26 +1,32 @@
 #include <bits/stdc++.h>
 using namespace std;
-void solve(){
-    string s;
-    cin>> s;
-    for (int i = 0; i < (s.size()/2)-1 ; i++)
-    {
-        if(s[i]!=s[i+1]){
-            cout << "YES"<<endl;
-            return;
-        }
-    }
-    cout << "NO\n";
-    
-}
 int main()
 {
-    
-    int t;
-    cin>> t;
-    while (t--)
+    int n;
+    cin >> n;
+    vector<int> v(n);
+    for (int i = 0; i < n; i++)
     {
-        solve();
+        cin >> v[i];
     }
+    sort(v.begin(), v.end());
+    int s = 10, d = 4, whosturn = 1;
+    while (!v.empty())
+    {
+        if (whosturn == 1)
+        {
+            s += v.back(); 
+            v.pop_back();  
+            whosturn = 2;         
+        }
+        else
+        {
+            d += v.back(); 
+            v.pop_back();  
+            whosturn = 1;         
+        }
+    }
+    cout << s << " " << d << endl;
+
     return 0;
 }
