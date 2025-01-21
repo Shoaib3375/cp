@@ -16,8 +16,4 @@ int main(){
         m[i]++;
     }
     cout << m[x];
-
-    
-    
-    
 }

@@ -16,6 +16,7 @@ int main()
             v[a]++;
         }
         int out = -1;
+        // v[3]  = 4
         for (int j = 1; j <= n; j++)
         {
             if (v[j] > 2)
