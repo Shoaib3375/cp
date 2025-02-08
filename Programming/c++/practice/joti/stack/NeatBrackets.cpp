@@ -1,31 +1,34 @@
-#include<bits/stdc++.h>
-
+#include <bits/stdc++.h>
 using namespace std;
-
-
 int main()
 {
-    stack<char> stack;
+    stack<char> st;
     string s;
     cin>> s;
-    for (char ch : s)
+    for (auto i : s)
     {
-        if (ch == '(')
+        // (((.))).()
+        if (i == '(')
         {
-            stack.push(ch);
+            st.push(i);
         }
-        else if (ch == ')' && !stack.empty() && stack.top() == '(')
+        else if (i == ')' && !st.empty() && st.top() == '(')
         {
-            stack.pop();
+            st.pop();
         }
-        
+        else
+        {
+            cout << "No" << endl;
+            return 0;
+        }
     }
-    if( stack.empty()) {
-        cout << "Yes"<<endl;
-    } else{
-        cout << "No"<<endl;
+    if (st.empty())
+    {
+        cout << "Yes" << endl;
     }
-
-
+    else
+    {
+        cout << "No" << endl;
+    }
     return 0;
 }
