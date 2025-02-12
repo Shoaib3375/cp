@@ -1,29 +1,27 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-const int ms = 1000000+7;
-int dp[ms] = {-1};
-int solve(int n){
-    if(n==0){
-        return 0;
-    }
-    if(dp[n]!=-1) return dp[n];
-    int res = INT_MAX;
-    int n2 = n;
-    while (n2>0)
-    {
-        int digit = n2%10;
-        if(digit!=0){
-            res = min(res,1+solve(n-digit));
-        }
-        n2/=10;
-    }
-    return dp[n] = res;
-    
-}
-int main(){
-    int n;
 
-    cin>> n;
-    cout << solve(n)<<endl;
-    
+int main()
+{
+    int n, target;
+    cin >> n >> target;
+    vector<int> c(n);
+    for (int &v : c)
+        cin >> v;
+
+    vector<int> dp(target + 1, 1e9);
+    // cout << dp[1];
+
+    dp[0] = 0;
+    for (int i = 1; i <= target; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            if (i - c[j] >= 0)
+            {
+                dp[i] = min(dp[i], dp[i - c[j]] + 1);
+            }
+        }
+    }
+    cout << (dp[target] == 1e9 ? -1 : dp[target]) << endl;
 }
