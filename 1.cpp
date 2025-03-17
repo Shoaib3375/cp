@@ -6,9 +6,8 @@ char getGrade(int score) {
 }
 int main()
 {
-    double radius; 
-    cin >> radius;
-    double areaofcircle = area(radius);
-    cout << "The area of the circle is: " << areaofcircle << endl;
+    int score;
+    cin >> score;
+    cout << getGrade(score) << endl;
     return 0;
 }
