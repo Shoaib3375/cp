@@ -1,18 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-
+char getGrade(int score) {
+    if (score >= 90) return 'A';
+    else return 'B';
+}
 int main()
 {
-    int t;
-    cin >> t;
-    set<pair<string, string>> v;
-    for (int i = 0; i < t; i++)
-    {
-        string s,q;
-        cin>> s>> q;
-        v.insert({s,q});
-    }
-    
-    cout << v.size() << endl;
+    double radius; 
+    cin >> radius;
+    double areaofcircle = area(radius);
+    cout << "The area of the circle is: " << areaofcircle << endl;
+    return 0;
 }
