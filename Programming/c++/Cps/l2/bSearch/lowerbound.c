@@ -3,6 +3,7 @@
 int lowerBound(int arr[], int size, int x) {
     int left = 0, right = size;
     while (left < right) {
+        printf("left: %d, right: %d\n", left, right);
         int mid = left + (right - left) / 2;
         if (arr[mid] < x)
             left = mid + 1;
