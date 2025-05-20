@@ -14,6 +14,6 @@
 @if(Session::has('success'))
     <li>{{ Session::get('success') }}</li>
 @endif
-<a href="{{route('admin.logout')}}">Logout</a>
+<a href="">Logout</a>
 </body>
 </html>

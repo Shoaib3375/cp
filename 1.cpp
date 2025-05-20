@@ -10,5 +10,8 @@ int main()
     cin >> score;
     cout << getGrade(score) << endl;
     //H.IdiotSquad$#@1234
+    // vjudge
+    // m3s7a
+    // H4jPEHudCh?gka7
     return 0;
 }
